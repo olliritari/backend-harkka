@@ -1,0 +1,59 @@
+version: "3"
+services:
+  ranking-app:
+    build: ./ranking-app/
+    depends_on: 
+      - ranking-db     
+    ports:
+      - 8000:8000
+    restart: always
+
+  ranking-db:
+    build: ./ranking-db/
+    ports:
+      - 27018:27018
+    restart: always
+
+  login-app:
+    build: ./login-app/
+    depends_on:
+     - login-db
+    ports:
+     - 8001:8001
+    restart: always
+
+  login-db:
+    build: ./login-db/
+    ports:
+      - 27017:27017
+    restart: always
+
+  online:
+    build: ./online/
+    ports:
+      - 8002:8002
+    restart: always
+
+  chat:
+    build: ./chat/
+    ports:
+      - 3000:3000
+    restart: always
+
+  game:
+    build: ./game/
+    ports:
+      - 8003:8003
+    restart: always
+
+  reverseproxy:
+    build: ./nginx/
+    ports:
+      - 80:80
+    restart: always
+    depends_on:
+      - ranking-app
+      - login-app
+      - online
+      - chat
+      - game

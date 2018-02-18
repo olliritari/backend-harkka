@@ -1,0 +1,18 @@
+{
+  "name": "onlinelist",
+  "version": "1.0.0",
+  "description": "harjoitus",
+  "main": "Online.js",
+  "scripts": {
+    "start": "node Online.js"
+  },
+  "keywords": [],
+  "author": "JoonasN",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3",
+    "vue-websocket": "^0.2.2"
+  },
+  "devDependencies": {}
+}

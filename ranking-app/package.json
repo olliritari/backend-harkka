@@ -1,0 +1,26 @@
+{
+  "name": "loppuharkka",
+  "version": "1.0.0",
+  "description": "web ja kompo kurssien loppuharkka",
+  "main": "ranking.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test",
+    "lib": "ranking-app"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "Olli Ritari",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.12"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}
